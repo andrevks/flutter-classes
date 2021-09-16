@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "684140915485",
+    "project_id": "evirtual-6d41a",
+    "storage_bucket": "evirtual-6d41a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684140915485:android:a80782da738e1cb04b0ff4",
+        "android_client_info": {
+          "package_name": "com.andre.evirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684140915485-27dr8gj48ut2j59oh4gj7knnt5st8p8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwfhhJrCmA5jGPQQVWbpfinFA3nY0SCnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684140915485-27dr8gj48ut2j59oh4gj7knnt5st8p8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
