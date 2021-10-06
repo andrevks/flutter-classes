@@ -20,10 +20,16 @@ class HomePageState extends State<HomePage> {
   int count = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home Page'),
+      ),
+      body: Center(
           child: GestureDetector(
-        child: Text('Contador: $count'),
+        child: Text(
+          'Contador: $count',
+          style: TextStyle(fontSize: 30),
+        ),
         onTap: () {
           setState(() {
             count++;
@@ -31,5 +37,18 @@ class HomePageState extends State<HomePage> {
         },
       )),
     );
+
+    // return Container(
+    //   child:
+    //   Center(
+    //       child: GestureDetector(
+    //     child: Text('Contador: $count'),
+    //     onTap: () {
+    //       setState(() {
+    //         count++;
+    //       });
+    //     },
+    //   )),
+    // );
   }
 }
