@@ -23,9 +23,13 @@ class ListScreen extends StatelessWidget {
               String name = snapshot.data!.docs[index].get('name');
               String socialMedia =
                   snapshot.data!.docs[index].get('socialMedia');
+              String age = snapshot.data!.docs[index].get('age').toString();
+              String sex = snapshot.data!.docs[index].get('sex');
               return ListTile(
                 title: Text(name),
                 subtitle: Text(socialMedia),
+                trailing: Text(age),
+                leading: Text(sex),
               );
             },
           );

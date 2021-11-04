@@ -13,6 +13,8 @@ class AddStudentScreen extends StatefulWidget {
 class _AddStudentScreenState extends State<AddStudentScreen> {
   TextEditingController _controllerName = TextEditingController();
   TextEditingController _controllerSocialMedia = TextEditingController();
+  TextEditingController _controllerAge = TextEditingController();
+  TextEditingController _controllerSex = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,22 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                 hintText: 'Informe a rede social',
               ),
             ),
+            TextFormField(
+              controller: _controllerAge,
+              decoration: InputDecoration(
+                labelText: 'Idade do Estudate',
+                labelStyle: TextStyle(color: Colors.blue),
+                hintText: 'Informe a idade do estudante',
+              ),
+            ),
+            TextFormField(
+              controller: _controllerSex,
+              decoration: InputDecoration(
+                labelText: 'Sexo do Estudante',
+                labelStyle: TextStyle(color: Colors.blue),
+                hintText: 'Informe o sexo do estudante',
+              ),
+            ),
             SizedBox(
               height: 40,
             ),
@@ -50,7 +68,13 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
               onPressed: () {
                 Database.addStudent(
                     name: _controllerName.text,
-                    socialMedia: _controllerSocialMedia.text);
+                    socialMedia: _controllerSocialMedia.text,
+                    age: _controllerAge.text.isEmpty
+                        ? null
+                        : int.parse(_controllerAge.text),
+                    sex: _controllerSex.text.isEmpty
+                        ? " "
+                        : _controllerSex.text);
                 Navigator.of(context).pop();
               },
               child: Text("Adicionar Estudante"),
